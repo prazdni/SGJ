@@ -10,6 +10,7 @@
           <e p="Manager" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="MainMenuManager.cs" t="Include" />
+            <e p="PauseManager.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

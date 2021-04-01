@@ -29,8 +29,7 @@ namespace Manager
 
         private void OnMusicClick()
         {
-            _shouldSound = !_shouldSound;
-            AudioManager.Instance.AdjustMusicVolume(_shouldSound);
+            AudioManager.Instance.AdjustMusicVolume();
         }
 
         private void OnExitClick()

@@ -10,6 +10,8 @@ namespace Manager
 
         public static AudioManager Instance;
 
+        private bool _isSilent;
+
         private void Awake()
         {
             if (Instance == null)
@@ -21,6 +23,8 @@ namespace Manager
             {
                 Destroy(gameObject);
             }
+
+            _isSilent = false;
         }
 
         private void Start()
@@ -30,18 +34,23 @@ namespace Manager
 
         public void AdjustMusicVolume(float volume)
         {
-            _audioMixer.SetFloat("Music", volume);
+            if (!_isSilent)
+            {
+                _audioMixer.SetFloat("Music", volume);
+            }
         }
 
-        public void AdjustMusicVolume(bool shouldSound)
+        public void AdjustMusicVolume()
         {
-            if (shouldSound)
+            _isSilent = !_isSilent;
+            
+            if (_isSilent)
             {
-                _audioMixer.SetFloat("Music", 0.0f);
+                _audioMixer.SetFloat("Music", -80.0f);
             }
             else
             {
-                _audioMixer.SetFloat("Music", -80.0f);
+                _audioMixer.SetFloat("Music", 0.0f);
             }
         }
     }
