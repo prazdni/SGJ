@@ -10,17 +10,21 @@ namespace Starter
         [SerializeField] private CardView _cardView;
         private CameraController _cameraController;
         private CardController _cardController;
+        private CardPool _cardPool;
 
         private void Awake()
         {
-            _cameraController = new CameraController(Camera.main);
-            _cardController = new CardController(Camera.main, _cardView, _cameraController);
+            var cameraMain = Camera.main;
+            _cameraController = new CameraController(cameraMain);
+            _cardPool = new CardPool(_cardView);
+            _cardController = new CardController(cameraMain, _cardView, _cameraController, _cardPool);
+            _cardView.Init(_cardController);
         }
 
         private void Update()
         {
             _cameraController.Update(Time.deltaTime);
-            //_cardController.Update(Time.deltaTime);
+            _cardController.Update(Time.deltaTime);
         }
     }
 }

@@ -23,7 +23,8 @@ namespace Controllers
             {
                 Action.Invoke(true);
             }
-            else
+
+            if (Input.GetMouseButtonUp(0))
             {
                 Action.Invoke(false);
             }
