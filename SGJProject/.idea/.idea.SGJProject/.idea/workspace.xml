@@ -20,13 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="888208cf-a48e-4f9e-ab33-3e9e8662f1cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PauseManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PauseManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/DefaultAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/DefaultAnimation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/AnimState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/AnimState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/SpriteAnimationsConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/SpriteAnimationsConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/CameraController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/CameraController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IAnimatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IAnimatable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IFixedUpdatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IFixedUpdatable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IUpdatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IUpdatable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IUpdatableAndFixedUpdatable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IUpdatableAndFixedUpdatable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/CharacterView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/CharacterView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/ContactsPoller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/ContactsPoller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/LevelObjectView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/LevelObjectView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/PlayerPhysicsWalker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainHero/PlayerPhysicsWalker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PlayerManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PlayerManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpriteAnimator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpriteAnimator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Starter.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Starter/MainSceneStarter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Starter/MainSceneStarter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/MainMenuManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,9 +75,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/MainMenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/PauseManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configs/SpriteAnimationsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configs/Track.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainHero/MainHeroPhysicsWalker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/MainMenuManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IUpdatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IFixedUpdatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IUpdatableAndFixedUpdatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainHero/CharacterView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainHero/PlayerMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Configs/AnimState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IAnimatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainHero/ContactsPoller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainHero/LevelObjectView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animation/DefaultAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Starter/MainSceneStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpriteAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainHero/PlayerPhysicsWalker.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617280710400</updated>
-      <workItem from="1617280722190" duration="2193000" />
+      <workItem from="1617280722190" duration="7105000" />
     </task>
     <servers />
   </component>
@@ -108,5 +163,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="598" y="114" key="RiderGenerateDialog" timestamp="1617289329387">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="598" y="114" key="RiderGenerateDialog/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1617289329387" />
   </component>
 </project>

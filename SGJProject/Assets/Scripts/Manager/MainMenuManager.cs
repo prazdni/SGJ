@@ -10,16 +10,12 @@ namespace Manager
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _musicButton;
         [SerializeField] private Button _exitButton;
-
-        private bool _shouldSound;
         
         private void Awake()
         {
             _startButton.onClick.AddListener(OnStartClick);
             _musicButton.onClick.AddListener(OnMusicClick);
             _exitButton.onClick.AddListener(OnExitClick);
-
-            _shouldSound = true;
         }
 
         private void OnStartClick()
