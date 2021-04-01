@@ -1,23 +1,32 @@
-﻿using Interface;
-using MainHero;
+﻿using System;
+using Card;
+using Interface;
 using UnityEngine;
 
 namespace Controllers
 {
     public class CameraController : IUpdatable
     {
-        private readonly CharacterView _characterView;
-        private Transform _cameraTransform;
+        private Camera _camera;
+        public Action<bool> Action = (b) => { };
 
-        public CameraController(Camera camera, CharacterView characterView)
+        public CameraController(Camera camera)
         {
-            _characterView = characterView;
-            _cameraTransform = camera.transform;
+            _camera = camera;
         }
         
         public void Update(float deltaTime)
         {
-            _cameraTransform.position = _characterView.transform.position.Change(y : 0.0f, z : -10.0f);
+            var raycastHit = Physics2D.Raycast(_camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            
+            if (raycastHit.collider && raycastHit.collider.CompareTag("Card") && Input.GetMouseButtonDown(0))
+            {
+                Action.Invoke(true);
+            }
+            else
+            {
+                Action.Invoke(false);
+            }
         }
     }
 }
