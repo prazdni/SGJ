@@ -16,7 +16,7 @@ namespace Controllers
             foreach (var sample in _samples)
             {
                 sample.Button.onClick.AddListener(() => _additionalViewController.ShowAdditional(sample));
-                sample.Button.onClick.AddListener(Cleanup);
+                sample.Button.onClick.AddListener(() => sample.gameObject.SetActive(false));
             }
         }
 
@@ -26,6 +26,21 @@ namespace Controllers
             {
                 sample.gameObject.SetActive(false);
             }
+        }
+
+        public int CheckVisible()
+        {
+            int isVisibleCount = 0;
+
+            foreach (var sample in _samples)
+            {
+                if (sample.gameObject.activeSelf)
+                {
+                    isVisibleCount++;
+                }
+            }
+
+            return isVisibleCount;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Controllers
         [SerializeField] private SamplesController _samplesController;
         [SerializeField] private DayController[] _days;
 
-        public int Day = 0;
+        [SerializeField, Range(0, 10)] private int Day = 0;
         public Action<int> DayChanged = i => { };
 
         private void Awake()
@@ -17,6 +17,18 @@ namespace Controllers
             ChangeDay(Day);
         }
 
+        public void CheckVisible()
+        {
+            int quantity = _samplesController.CheckVisible();
+
+            if (quantity == 0)
+            {
+                ChangeDay();
+            }
+            
+            Debug.Log(quantity);
+        }
+        
         public void ChangeDay()
         {
             Day++;

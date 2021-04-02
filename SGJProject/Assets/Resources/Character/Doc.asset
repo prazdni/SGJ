@@ -38,3 +38,11 @@ MonoBehaviour:
         \u041F\u043E\u043A\u0443\u043F\u0430\u0435\u043C!"
       Influences: []
     Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}
+  - Phrase: Oh
+    Explanation: Yura
+    Responses:
+    - ResponsePhrase: Can't help you!
+      Influences: []
+    - ResponsePhrase: Of course!
+      Influences: []
+    Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}

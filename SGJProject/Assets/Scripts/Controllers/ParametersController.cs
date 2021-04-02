@@ -7,7 +7,9 @@ namespace Controllers
     public class ParametersController : MonoBehaviour
     {
         [SerializeField] private Image[] _parameters;
+        
         [SerializeField] private FieldController _fieldController;
+        [SerializeField] private AdditionalViewController _additionalViewController;
 
         private bool _isAgentShown;
 
@@ -17,11 +19,14 @@ namespace Controllers
             {
                 parameter.fillAmount = 0.5f;
             }
+
+            _additionalViewController.Action += ChangeResource;
         }
 
         public void ChangeResource(Response response)
         {
-            Debug.Log("Changed resource");
+            _additionalViewController.gameObject.SetActive(false);
+            _fieldController.CheckVisible();
         }
 
         private void ShowAgent(Response response)

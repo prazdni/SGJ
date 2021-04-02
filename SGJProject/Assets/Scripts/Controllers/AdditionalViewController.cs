@@ -28,7 +28,7 @@ namespace Controllers
             _text.text = characterView.Characteristics.Explanation;
             
             _buttonOne.onClick.RemoveAllListeners();
-            _buttonOne.onClick.RemoveAllListeners();
+            _buttonTwo.onClick.RemoveAllListeners();
             _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
             _buttonTwo.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[1]);});
             
