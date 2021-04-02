@@ -37,9 +37,11 @@
             <e p="InfluenceType.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
+            <e p="AdditionalViewController.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="DayController.cs" t="Include" />
             <e p="FieldController.cs" t="Include" />
+            <e p="SamplesController.cs" t="Include" />
           </e>
           <e p="Extensions.cs" t="Include" />
           <e p="Interface" t="Include">

@@ -6,6 +6,7 @@ namespace Controllers
 {
     public class FieldController : MonoBehaviour
     {
+        [SerializeField] private SamplesController _samplesController;
         [SerializeField] private DayController[] _days;
         
         public int Day = 0;
@@ -25,10 +26,7 @@ namespace Controllers
 
         private void ChangeDay(int day)
         {
-            foreach (var dayController in _days)
-            {
-                dayController.Cleanup();
-            }
+            _samplesController.Cleanup();
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.ReturnDay(day));
             _days[day].Init(resource);

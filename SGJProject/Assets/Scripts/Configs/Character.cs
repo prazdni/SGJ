@@ -23,6 +23,7 @@ namespace Configs
     public struct Dialogue
     {
         public string Phrase;
+        public string Explanation;
         public string PositiveResponse;
         public string NegativeResponse;
     }

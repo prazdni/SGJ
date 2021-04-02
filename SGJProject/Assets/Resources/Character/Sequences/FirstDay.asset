@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FirstDay
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 11400000, guid: d7584a06528a6d1489bdaf4456d9c127, type: 2}
-  - {fileID: 11400000, guid: d7584a06528a6d1489bdaf4456d9c127, type: 2}
+  - {fileID: 11400000, guid: 4aa2d58e3fdd89744b101873a177e07d, type: 2}
+  - {fileID: 11400000, guid: bbc0a250e74b45c4c9ae0e89f79df01f, type: 2}

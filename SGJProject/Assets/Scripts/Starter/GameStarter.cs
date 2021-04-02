@@ -15,16 +15,16 @@ namespace Starter
         private void Awake()
         {
             var cameraMain = Camera.main;
-            _cameraController = new CameraController(cameraMain);
-            _cardPool = new CardPool(_cardView);
-            _cardController = new CardController(cameraMain, _cardView, _cameraController, _cardPool);
-            _cardView.Init(_cardController);
+            //_cameraController = new CameraController(cameraMain);
+            //_cardPool = new CardPool(_cardView);
+            //_cardController = new CardController(cameraMain, _cardView, _cameraController, _cardPool);
+            //_cardView.Init(_cardController);
         }
 
         private void Update()
         {
-            _cameraController.Update(Time.deltaTime);
-            _cardController.Update(Time.deltaTime);
+            //_cameraController.Update(Time.deltaTime);
+            //_cardController.Update(Time.deltaTime);
         }
     }
 }

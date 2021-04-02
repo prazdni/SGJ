@@ -22,17 +22,9 @@ namespace Controllers
                 var num = Random.Range(0, characters.Count);
                 var character = characters[num];
                 var characterType = character.Characteristics[Random.Range(0, character.Characteristics.Length)];
-                _characterViews[i].gameObject.SetActive(true);
+                
                 _characterViews[i].Init(characterType);
                 characters.RemoveAt(num);
-            }
-        }
-
-        public void Cleanup()
-        {
-            foreach (var characterView in _characterViews)
-            {
-                characterView.gameObject.SetActive(false);
             }
         }
     }
