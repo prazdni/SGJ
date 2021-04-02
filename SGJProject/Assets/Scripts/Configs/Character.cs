@@ -13,18 +13,23 @@ namespace Configs
     [Serializable]
     public struct Characteristics
     {
-        public InfluenceType[] InfluenceTypes;
-        public float InfluencePoint;
-        public Dialogue Dialogue;
+        public string Phrase;
+        public string Explanation;
+        public Response[] Responses;
         public Sprite Sprite;
     }
 
     [Serializable]
-    public struct Dialogue
+    public struct Response
     {
-        public string Phrase;
-        public string Explanation;
-        public string PositiveResponse;
-        public string NegativeResponse;
+        public string ResponsePhrase;
+        public Influence[] Influences;
+    }
+    
+    [Serializable]
+    public struct Influence
+    {
+        public InfluenceType InfluenceType;
+        public float InfluencePoint;
     }
 }

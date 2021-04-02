@@ -8,7 +8,7 @@ namespace Controllers
     {
         [SerializeField] private SamplesController _samplesController;
         [SerializeField] private DayController[] _days;
-        
+
         public int Day = 0;
         public Action<int> DayChanged = i => { };
 
@@ -28,8 +28,17 @@ namespace Controllers
         {
             _samplesController.Cleanup();
 
-            var resource = Resources.Load<CharactersDaySequence>(Extensions.ReturnDay(day));
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(day));
             _days[day].Init(resource);
+        }
+
+        public void ShowAgent(Response response)
+        {
+            _samplesController.Cleanup();
+            
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-1));
+            
+            _days[_days.Length - 1].Init(resource);
         }
     }
 }

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DefaultWorker
   m_EditorClassIdentifier: 
   Characteristics:
-  - InfluenceTypes: 04000000
-    InfluencePoint: 1
-    Dialogue:
-      Phrase: OOH
-      Explanation: Ooh I forgot my tools
-      PositiveResponse: My
-      NegativeResponse: God
+  - Phrase: Hmm
+    Explanation: I'm here to help you
+    Responses:
+    - ResponsePhrase: "\u042F\u0441\u043D\u043E"
+      Influences: []
+    - ResponsePhrase: "\u041F\u043E\u043D\u044F\u0442\u043D\u043E"
+      Influences: []
     Sprite: {fileID: 21300000, guid: e1fb1b36b25a189489757566af7f724a, type: 3}
