@@ -6,6 +6,7 @@
         Money   = 1,
         Science = 2,
         Awards  = 3,
-        Tools   = 4
+        Tools   = 4,
+        Revert  = 5
     }
 }

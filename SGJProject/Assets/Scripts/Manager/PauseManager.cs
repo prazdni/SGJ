@@ -1,4 +1,5 @@
 ﻿using System;
+using Controllers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ namespace Manager
 {
     public class PauseManager : MonoBehaviour
     {
+        [SerializeField] private AdditionalViewController _additionalViewController;
         [SerializeField] private Transform _pauseMenu;
         [SerializeField] private Button _pauseButton;
 
@@ -26,7 +28,14 @@ namespace Manager
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                SetPause();
+                if (_additionalViewController.gameObject.activeSelf)
+                {
+                    _additionalViewController.gameObject.SetActive(false);
+                }
+                else
+                {
+                    SetPause();
+                }
             }
         }
         
