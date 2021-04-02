@@ -80,6 +80,7 @@ namespace Card
                     }
                     else
                     {
+                        Action.Invoke(0.0f);
                         _cardView.transform.position = Vector3.Lerp(_cardView.transform.position, _defaultPosition, moveLerp);
                     }
                 }
