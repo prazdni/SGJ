@@ -20,32 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="888208cf-a48e-4f9e-ab33-3e9e8662f1cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/SoundController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/SoundController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SGJProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mixers/MainAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mixers/MainAudioMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Days/FourthDay/Historican.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Character/Days/FourthDay/Historican.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/DefaultWorker.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/DefaultWorker.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Dialogues/Dialogue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Character/Dialogues/Dialogue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Doc.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Doc.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/EndGame.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/EndGame.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Genetic.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Genetic.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Historican.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Character/Historican.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/AdditionalViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/AdditionalViewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/DayTextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/DayTextController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/FieldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/FieldController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/TextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/TextController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PauseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Person/CharacterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Person/CharacterView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/SoundController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/SoundController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +148,7 @@
       <updated>1617280710400</updated>
       <workItem from="1617280722190" duration="24137000" />
       <workItem from="1617355883183" duration="38979000" />
-      <workItem from="1617435347945" duration="33368000" />
+      <workItem from="1617435347945" duration="33708000" />
     </task>
     <servers />
   </component>
