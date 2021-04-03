@@ -1,5 +1,6 @@
 ﻿public static class Extensions
 { 
+    private static readonly string Boss = "Character/Sequences/Boss";
     private static readonly string Helper = "Character/Sequences/Helper";
     private static readonly string DayZero = "Character/Sequences/ZeroDay";
     private static readonly string DayOne = "Character/Sequences/FirstDay";
@@ -17,6 +18,8 @@
     {
         switch (day)
         {
+            case -2:
+                return Boss;
             case -1:
                 return Helper;
             case 0:

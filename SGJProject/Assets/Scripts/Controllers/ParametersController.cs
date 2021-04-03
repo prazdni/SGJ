@@ -42,11 +42,7 @@ namespace Controllers
             _additionalViewController.gameObject.SetActive(false);
 
             var influences = response.Influences;
-            foreach (var p in _previousValue)
-            {
-                Debug.Log(p);
-            }
-            
+
             var previousValue = new List<float>();
             for (int i = 0; i < _parameters.Length; i++)
             {
@@ -76,7 +72,6 @@ namespace Controllers
                     case InfluenceType.Revert:
                         for (int i = 0; i < _parameters.Length; i++)
                         {
-                            Debug.Log(_previousValue[i]);
                             _parameters[i].fillAmount = _previousValue[i];
                         }
                         break;
@@ -102,7 +97,7 @@ namespace Controllers
             }
             else
             {
-                _fieldController.CheckVisible();
+                _fieldController.CheckInvisible();
             }
         }
 

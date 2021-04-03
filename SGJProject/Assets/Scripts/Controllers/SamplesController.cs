@@ -36,19 +36,19 @@ namespace Controllers
             }
         }
 
-        public int CheckVisible()
+        public int CheckVisibleTasks()
         {
-            int isVisibleCount = 0;
+            int visibleCount = 0;
 
             foreach (var sample in _samples)
             {
                 if (sample.gameObject.activeSelf)
                 {
-                    isVisibleCount++;
+                    visibleCount++;
                 }
             }
 
-            return isVisibleCount;
+            return visibleCount;
         }
     }
 }
