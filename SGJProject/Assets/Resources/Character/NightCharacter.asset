@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44f7d2ce55624f21b06e761af2b0478b, type: 3}
-  m_Name: Boss
+  m_Name: NightCharacter
   m_EditorClassIdentifier: 
   Characteristics:
-  - Phrase: Oof
-    Explanation: "\u0417\u0430 \u0440\u0430\u0431\u043E\u0442\u0443"
+  - Phrase: "\u042D\u0442\u043E \u044F"
+    Explanation: "\u041D\u043E\u0447\u044C\u044E \u043D\u0430\u0434\u043E \u0441\u043F\u0430\u0442\u044C!"
     Responses:
-    - ResponsePhrase: "\u041F\u043E\u043D\u044F\u043B"
-      Influences: []
-    - ResponsePhrase: "\u041F\u0440\u043E\u0434\u043B\u043E\u0436\u0430\u044E"
-      Influences: []
-    Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}
+    - ResponsePhrase: "\u041F\u043E\u0439\u0434\u0443 \u043F\u043E\u0441\u043F\u043B\u044E"
+      Influences:
+      - InfluenceType: 6
+        InfluencePoint: 0
+    Sprite: {fileID: 21300000, guid: a6ae2c8134bff814383697356bbafb86, type: 3}

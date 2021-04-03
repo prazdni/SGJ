@@ -30,7 +30,10 @@ namespace Controllers
             _buttonOne.onClick.RemoveAllListeners();
             _buttonTwo.onClick.RemoveAllListeners();
             
-            if (characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.MainCharacter)
+            if (characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.NightCharacter ||
+                characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.MorningCharacter ||
+                characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.Agent ||
+                characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.EndGame)
             {
                 _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
                 _buttonOneText.text = characterView.Characteristics.Responses[0].ResponsePhrase;

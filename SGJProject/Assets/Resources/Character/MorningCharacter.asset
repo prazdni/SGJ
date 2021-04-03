@@ -20,6 +20,6 @@ MonoBehaviour:
     - ResponsePhrase: "\u041D\u043E\u0432\u044B\u0439 \u0434\u0435\u043D\u044C -
         \u043D\u043E\u0432\u044B\u0435 \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"
       Influences:
-      - InfluenceType: 6
+      - InfluenceType: 7
         InfluencePoint: 0
-    Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}
+    Sprite: {fileID: 21300000, guid: a6ae2c8134bff814383697356bbafb86, type: 3}

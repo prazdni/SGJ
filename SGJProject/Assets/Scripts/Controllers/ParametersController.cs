@@ -59,13 +59,20 @@ namespace Controllers
                         break;
                     case InfluenceType.NightCharacter:
                         _fieldController.StartDay();
-                        break;
+                        return;
                     case InfluenceType.MorningCharacter:
                         _fieldController.StartTasks();
-                        break;
+                        return;
                     case InfluenceType.Agent:
+                        for (int i = 0; i < _parameters.Length; i++)
+                        {
+                            _parameters[i].fillAmount = _previousValue[i];
+                        }
                         _fieldController.RestartDay();
-                        break;
+                        return;
+                    case InfluenceType.EndGame:
+                        _fieldController.EndGame("Спасибо за то, что поиграли в игру!");
+                        return;
                     case InfluenceType.Money:
                         _parameters[0].fillAmount = _parameters[0].fillAmount + influence.InfluencePoint;
                         break;
@@ -77,12 +84,6 @@ namespace Controllers
                         break;
                     case InfluenceType.Tools:
                         _parameters[3].fillAmount = _parameters[3].fillAmount + influence.InfluencePoint;
-                        break;
-                    case InfluenceType.Revert:
-                        for (int i = 0; i < _parameters.Length; i++)
-                        {
-                            _parameters[i].fillAmount = _previousValue[i];
-                        }
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -101,12 +102,12 @@ namespace Controllers
                 }
                 else
                 {
-                    _endGameController.EndGame("");
+                    _fieldController.EndGame("Попробуй ещё раз!");
                 }
             }
             else
             {
-                _fieldController.ShowRegular();
+                _fieldController.Check();
             }
         }
 

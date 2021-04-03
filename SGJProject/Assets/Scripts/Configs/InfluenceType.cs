@@ -7,9 +7,9 @@
         Science          = 2,
         Awards           = 3,
         Tools            = 4,
-        Revert           = 5,
-        Agent            = 6,
-        NightCharacter   = 7,
-        MorningCharacter = 8
+        Agent            = 5,
+        NightCharacter   = 6,
+        MorningCharacter = 7,
+        EndGame          = 8
     }
 }
