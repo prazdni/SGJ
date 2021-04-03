@@ -29,13 +29,13 @@ namespace Controllers
         public void Check()
         {
             int quantity = _samplesController.CheckVisibleTasks();
-            
-            Debug.Log(quantity + " " + _tasks);
-            
+
             if (quantity == _tasks)
             {
                 ShowNightCharacter();
             }
+            
+            TaskChanged.Invoke(quantity - _tasks);
         }
 
         private void ChangeTasksQuantity()
@@ -72,8 +72,8 @@ namespace Controllers
             _samplesController.Cleanup();
             
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-1));
-
-            _days[_days.Length - 3].Init(resource);
+            Debug.Log(_days[_days.Length - 1].name);
+            _days[_days.Length - 1].Init(resource);
             
             TaskChanged.Invoke(0);
         }
@@ -93,8 +93,16 @@ namespace Controllers
             _samplesController.Cleanup();
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-3));
-            _days[_days.Length - 2].Init(resource);
             
+            if (_day == _days.Length - 2)
+            {
+                StartTasks();
+            }
+            else
+            {
+                _days[_days.Length - 1].Init(resource);
+            }
+
             TaskChanged.Invoke(0);
         }
 

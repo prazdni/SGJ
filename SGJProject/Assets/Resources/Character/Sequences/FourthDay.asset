@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af32181918364209adac4a23aefc4b38, type: 3}
-  m_Name: SecondDay
+  m_Name: FourthDay
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 11400000, guid: 4aa2d58e3fdd89744b101873a177e07d, type: 2}
-  - {fileID: 11400000, guid: 4ea5e744d3a25874f8e1b4a793021d8a, type: 2}
-  - {fileID: 11400000, guid: d7584a06528a6d1489bdaf4456d9c127, type: 2}
+  - {fileID: 11400000, guid: 1136c0df907229c4e9a24343a4669ba0, type: 2}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44f7d2ce55624f21b06e761af2b0478b, type: 3}
-  m_Name: Agent
+  m_Name: EndGame
   m_EditorClassIdentifier: 
   Characteristics:
   - Phrase: Oh
@@ -18,6 +18,6 @@ MonoBehaviour:
     Responses:
     - ResponsePhrase: "\u041D\u0435 \u043C\u043E\u0433\u0443"
       Influences:
-      - InfluenceType: 5
+      - InfluenceType: 8
         InfluencePoint: 0
     Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}

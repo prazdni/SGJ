@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44f7d2ce55624f21b06e761af2b0478b, type: 3}
-  m_Name: Scientist
+  m_Name: Genetic
   m_EditorClassIdentifier: 
   Characteristics:
   - Phrase: Oh
@@ -45,7 +45,7 @@ MonoBehaviour:
         InfluencePoint: 0.1
       - InfluenceType: 4
         InfluencePoint: 0.1
-    Sprite: {fileID: 21300000, guid: e1fb1b36b25a189489757566af7f724a, type: 3}
+    Sprite: {fileID: 21300000, guid: 6adeef7efbdeccb42af18e00128b2f79, type: 3}
   - Phrase: asdasd
     Explanation: asdasd
     Responses:
@@ -61,4 +61,4 @@ MonoBehaviour:
         InfluencePoint: 0.1
       - InfluenceType: 4
         InfluencePoint: 0.1
-    Sprite: {fileID: 21300000, guid: e1fb1b36b25a189489757566af7f724a, type: 3}
+    Sprite: {fileID: 21300000, guid: 6adeef7efbdeccb42af18e00128b2f79, type: 3}
