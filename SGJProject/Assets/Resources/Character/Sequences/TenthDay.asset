@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af32181918364209adac4a23aefc4b38, type: 3}
+  m_Name: TenthDay
+  m_EditorClassIdentifier: 
+  Characters:
+  - {fileID: 11400000, guid: 1b5bb08e74727044596894bc426167c9, type: 2}
+  - {fileID: 11400000, guid: 4ce1f3231d568ba4b8743e6d5ec2d486, type: 2}
+  - {fileID: 11400000, guid: 87fdeab75e18dd341a866c3a15cdf7ec, type: 2}
+  - {fileID: 11400000, guid: f7cf59cc456ab6d42b16aa604b381147, type: 2}

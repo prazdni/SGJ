@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: ThirdDay
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 11400000, guid: 4aa2d58e3fdd89744b101873a177e07d, type: 2}
-  - {fileID: 11400000, guid: 4ea5e744d3a25874f8e1b4a793021d8a, type: 2}
-  - {fileID: 11400000, guid: d7584a06528a6d1489bdaf4456d9c127, type: 2}
-  - {fileID: 11400000, guid: 4aa2d58e3fdd89744b101873a177e07d, type: 2}
+  - {fileID: 11400000, guid: dfa9a6bfa63f6ef47bd5c5532943ca59, type: 2}
+  - {fileID: 11400000, guid: e8675d145bc9baa40a8b7a180bd795e6, type: 2}
+  - {fileID: 11400000, guid: 199cbf86913491442b9d9daf55d23dd4, type: 2}

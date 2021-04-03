@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: FourthDay
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 11400000, guid: 1136c0df907229c4e9a24343a4669ba0, type: 2}
+  - {fileID: 11400000, guid: 24adc696d8f74e04ba2e4f7819e914fa, type: 2}
+  - {fileID: 11400000, guid: 28b9879c5ccb5b348a8600897d4760f1, type: 2}
+  - {fileID: 11400000, guid: b9e5a08f895e29d44ba422b3ea7e16cf, type: 2}

@@ -85,7 +85,7 @@ namespace Controllers
                     case InfluenceType.Money:
                         _parameters[0].fillAmount = _parameters[0].fillAmount + influence.InfluencePoint;
                         break;
-                    case InfluenceType.Science:
+                    case InfluenceType.Safety:
                         _parameters[1].fillAmount = _parameters[1].fillAmount + influence.InfluencePoint;
                         break;
                     case InfluenceType.Awards:

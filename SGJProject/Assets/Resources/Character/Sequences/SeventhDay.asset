@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af32181918364209adac4a23aefc4b38, type: 3}
+  m_Name: SeventhDay
+  m_EditorClassIdentifier: 
+  Characters:
+  - {fileID: 11400000, guid: 577302c7e7ec0e8448c567f923235d31, type: 2}
+  - {fileID: 11400000, guid: 2f42da1d88e521e4eb317e1ebf11c80e, type: 2}
+  - {fileID: 11400000, guid: 88ff7c52dc72adb4fb7570bc96b6badd, type: 2}
+  - {fileID: 11400000, guid: 45a6237fb3f1b04498830b0e7728739a, type: 2}

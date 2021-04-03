@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af32181918364209adac4a23aefc4b38, type: 3}
+  m_Name: NinthDay
+  m_EditorClassIdentifier: 
+  Characters:
+  - {fileID: 11400000, guid: 6caf5870fe9b48c4fa2bceb4d2a6b76a, type: 2}
+  - {fileID: 11400000, guid: 074d41851a09ebb40b4ae2f4c9b630cc, type: 2}
+  - {fileID: 11400000, guid: 517e7e62ae1591b479358b5d319314fa, type: 2}
+  - {fileID: 11400000, guid: 8cb6141658baaa94094a96f221a3a392, type: 2}

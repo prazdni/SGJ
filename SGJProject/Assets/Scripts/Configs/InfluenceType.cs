@@ -4,7 +4,7 @@
     {
         None             = 0,
         Money            = 1,
-        Science          = 2,
+        Safety           = 2,
         Awards           = 3,
         Tools            = 4,
         Agent            = 5,

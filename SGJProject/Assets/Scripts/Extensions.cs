@@ -67,7 +67,7 @@ public static class Extensions
                 return "";
             case InfluenceType.Money:
                 return "";
-            case InfluenceType.Science:
+            case InfluenceType.Safety:
                 return "";
             case InfluenceType.Awards:
                 return "";

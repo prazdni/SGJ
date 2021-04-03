@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Characteristics:
   - Phrase: Hmm
+    Name: 
     Explanation: "\u042F \u0436\u0434\u0430\u043B \u044D\u0442\u043E\u0433\u043E
       \u0434\u043D\u044F 15 \u043B\u0435\u0442! \u041D\u0430\u043A\u043E\u043D\u0435\u0446-\u0442\u043E
       \u0443 \u043C\u0435\u043D\u044F \u043E\u0442\u043F\u0443\u0441\u043A! \u042E\u0440\u0430,
@@ -34,6 +35,7 @@ MonoBehaviour:
         InfluencePoint: 0
     Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}
   - Phrase: Hmmm
+    Name: 
     Explanation: "\u0410 \u0432\u043E\u0442 \u043E\u0431 \u044D\u0442\u043E\u043C
       \u044F \u043A\u0430\u043A-\u0442\u043E \u043D\u0435 \u043F\u043E\u0434\u0443\u043C\u0430\u043B\u2026
       \u041C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u043A\u0442\u043E-\u0442\u043E
@@ -50,6 +52,7 @@ MonoBehaviour:
         InfluencePoint: 0
     Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}
   - Phrase: Hmmmm
+    Name: 
     Explanation: "\u0422\u044B \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0435
       \u0433\u043E\u0432\u043E\u0440\u0438\u0448\u044C, \u042E\u0440\u0430! \u042F
       15 \u043B\u0435\u0442 \u043D\u0435 \u043F\u043E\u0434\u043D\u0438\u043C\u0430\u043B\u0441\u044F
@@ -71,6 +74,6 @@ MonoBehaviour:
     Responses:
     - ResponsePhrase: "\u042D\u0442\u043E\u2026 \u044F"
       Influences:
-      - InfluenceType: 9
+      - InfluenceType: 10
         InfluencePoint: 0
     Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}

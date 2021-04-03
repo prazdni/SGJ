@@ -13,6 +13,7 @@ namespace Controllers
         public Action<Response> Action = (r) => { };
         
         [SerializeField] private Image _image;
+        [SerializeField] private TMP_Text _literallyWho;
         [SerializeField] private TMP_Text _text;
         
         [SerializeField] private Button _buttonOne;
@@ -25,6 +26,7 @@ namespace Controllers
         {
             gameObject.SetActive(true);
             _image.sprite = characterView.Characteristics.Sprite;
+            _literallyWho.text = characterView.Characteristics.Name;
             _text.text = characterView.Characteristics.Explanation;
             
             _buttonOne.onClick.RemoveAllListeners();
@@ -35,10 +37,10 @@ namespace Controllers
                 characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.Agent ||
                 characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.EndGame)
             {
-                _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
-                _buttonOneText.text = characterView.Characteristics.Responses[0].ResponsePhrase;
+                _buttonOne.gameObject.SetActive(false);
                 
-                _buttonTwo.gameObject.SetActive(false);
+                _buttonTwo.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
+                _buttonTwoText.text = characterView.Characteristics.Responses[0].ResponsePhrase;
             }
             else
             {
@@ -55,14 +57,16 @@ namespace Controllers
         public void ShowAdditional(Characteristics characteristics)
         {
             _image.sprite = characteristics.Sprite;
+            _literallyWho.text = characteristics.Name;
             _text.text = characteristics.Explanation;
             
             _buttonOne.onClick.RemoveAllListeners();
             _buttonTwo.onClick.RemoveAllListeners();
-            _buttonOne.onClick.AddListener(() => { Action.Invoke(characteristics.Responses[0]);});
-            _buttonOneText.text = characteristics.Responses[0].ResponsePhrase;
+            
+            _buttonTwo.onClick.AddListener(() => { Action.Invoke(characteristics.Responses[0]);});
+            _buttonTwoText.text = characteristics.Responses[0].ResponsePhrase;
                 
-            _buttonTwo.gameObject.SetActive(false);
+            _buttonOne.gameObject.SetActive(false);
         }
     }
 }

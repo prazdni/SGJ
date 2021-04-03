@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af32181918364209adac4a23aefc4b38, type: 3}
+  m_Name: EightDay
+  m_EditorClassIdentifier: 
+  Characters:
+  - {fileID: 11400000, guid: e7915dd3a160f56458cc559a5b058d62, type: 2}
+  - {fileID: 11400000, guid: 9d4cd63c39397f649b99a1e24d6343bc, type: 2}
+  - {fileID: 11400000, guid: 082ce6cd5ee637544a76736ba16111e2, type: 2}
+  - {fileID: 11400000, guid: 94f5c99599d828d49ad12d92cbf86f83, type: 2}

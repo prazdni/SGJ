@@ -430,6 +430,7 @@ MonoBehaviour:
   Button: {fileID: 1111150900}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -2670,6 +2671,7 @@ MonoBehaviour:
   Button: {fileID: 15862256}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -3422,6 +3424,7 @@ MonoBehaviour:
   Button: {fileID: 1182169582}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -3614,6 +3617,7 @@ MonoBehaviour:
   Button: {fileID: 682029288}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -3806,6 +3810,7 @@ MonoBehaviour:
   Button: {fileID: 399550356}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -5322,6 +5327,7 @@ MonoBehaviour:
   Button: {fileID: 178397515}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -6445,6 +6451,7 @@ MonoBehaviour:
   Button: {fileID: 281714497}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -6508,7 +6515,7 @@ MonoBehaviour:
   - {fileID: 722207165}
   - {fileID: 888016338}
   _endGameController: {fileID: 1575522352}
-  _day: 1
+  _day: 0
   _tasks: 1
 --- !u!114 &1369715643
 MonoBehaviour:
@@ -7445,6 +7452,7 @@ MonoBehaviour:
   Button: {fileID: 1857093968}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -7524,6 +7532,7 @@ MonoBehaviour:
   Button: {fileID: 1790011063}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -7982,6 +7991,7 @@ MonoBehaviour:
   Button: {fileID: 413331783}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -9204,6 +9214,7 @@ MonoBehaviour:
   Button: {fileID: 1799012492}
   Characteristics:
     Phrase: 
+    Name: 
     Explanation: 
     Responses: []
     Sprite: {fileID: 0}
@@ -9956,6 +9967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 782212413}
+  _literallyWho: {fileID: 0}
   _text: {fileID: 1607638106}
   _buttonOne: {fileID: 1602908399}
   _buttonTwo: {fileID: 520956537}

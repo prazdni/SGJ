@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: SecondDay
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 11400000, guid: 4aa2d58e3fdd89744b101873a177e07d, type: 2}
-  - {fileID: 11400000, guid: 4ea5e744d3a25874f8e1b4a793021d8a, type: 2}
-  - {fileID: 11400000, guid: d7584a06528a6d1489bdaf4456d9c127, type: 2}
+  - {fileID: 11400000, guid: d492a8fad52e00b4d8dfcdb001226932, type: 2}
+  - {fileID: 11400000, guid: 7cf9690bd090ca14a96f79133da42d74, type: 2}
