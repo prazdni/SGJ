@@ -62,7 +62,7 @@ namespace Controllers
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(day));
             
-            _days[day].Init(resource);
+            _days[0].Init(resource);
             
             TaskChanged.Invoke(_samplesController.CheckVisibleTasks() - _tasks);
         }
@@ -72,8 +72,7 @@ namespace Controllers
             _samplesController.Cleanup();
             
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-1));
-            Debug.Log(_days[_days.Length - 1].name);
-            _days[_days.Length - 1].Init(resource);
+            _days[1].Init(resource);
             
             TaskChanged.Invoke(0);
         }
@@ -83,7 +82,17 @@ namespace Controllers
             _samplesController.Cleanup();
             
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-2));
-            _days[_days.Length - 1].Init(resource);
+            _days[1].Init(resource);
+            
+            TaskChanged.Invoke(0);
+        }
+
+        public void ShowEndGameCharacter()
+        {
+            _samplesController.Cleanup();
+            
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-4));
+            _days[1].Init(resource);
             
             TaskChanged.Invoke(0);
         }
@@ -94,13 +103,13 @@ namespace Controllers
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-3));
             
-            if (_day == _days.Length - 2)
+            if (_day == 2)
             {
-                StartTasks();
+                ShowEndGameCharacter();
             }
             else
             {
-                _days[_days.Length - 1].Init(resource);
+                _days[1].Init(resource);
             }
 
             TaskChanged.Invoke(0);
@@ -108,6 +117,7 @@ namespace Controllers
 
         public void RestartDay()
         {
+            Debug.Log(_day);
             ChangeDay(_day);
         }
 
@@ -117,7 +127,7 @@ namespace Controllers
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(_day));
             
-            _days[_day].Init(resource);
+            _days[0].Init(resource);
             
             TaskChanged.Invoke(_samplesController.CheckVisibleTasks() - _tasks);
         }

@@ -1,5 +1,6 @@
 ﻿public static class Extensions
 { 
+    private static readonly string EndGameCharacter = "Character/Sequences/EndGameCharacter";
     private static readonly string MorningCharacter = "Character/Sequences/MorningCharacter";
     private static readonly string NightCharacter = "Character/Sequences/NightCharacter";
     private static readonly string Helper = "Character/Sequences/Helper";
@@ -19,6 +20,8 @@
     {
         switch (day)
         {
+            case -4:
+                return EndGameCharacter;
             case -3:
                 return MorningCharacter;
             case -2:
