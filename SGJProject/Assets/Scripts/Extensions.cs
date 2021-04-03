@@ -14,7 +14,7 @@ public static class Extensions
     private static readonly string DayThree = "Character/Sequences/ThirdDay";
     private static readonly string DayFour = "Character/Sequences/FourthDay";
     private static readonly string DayFive = "Character/Sequences/FifthDay";
-    private static readonly string DaySix = "Character/Sequences/SixDay";
+    private static readonly string DaySix = "Character/Sequences/SixthDay";
     private static readonly string DaySeven = "Character/Sequences/SeventhDay";
     private static readonly string DayEight = "Character/Sequences/EightDay";
     private static readonly string DayNine = "Character/Sequences/NinthDay";

@@ -16,7 +16,6 @@ namespace Person
         
         public void Init(Characteristics item)
         {
-            Debug.Log(item.Sprite);
             gameObject.SetActive(true);
             Characteristics = item;
             Image.sprite = item.Sprite;

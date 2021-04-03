@@ -42,14 +42,22 @@ namespace Controllers
 
         private void ChangeTasksQuantity()
         {
-            if (_day <= 2)
+            if (_day <= 3)
             {
+                Debug.Log("first " + _day);
                 _tasks = 1;
             }
 
-            if (2 < _day && _day <= 4)
+            if (3 < _day && _day <= 7)
             {
-                _tasks = 3;
+                Debug.Log("second " + _day);
+                _tasks = 1;
+            }
+
+            if (7 < _day && _day <= 10)
+            {
+                Debug.Log("third " + _day);
+                _tasks = 1;
             }
         }
 
@@ -105,7 +113,7 @@ namespace Controllers
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-3));
             
-            if (_day == 2)
+            if (_day == 11)
             {
                 ShowEndGameCharacter();
             }

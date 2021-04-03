@@ -8,9 +8,11 @@ namespace Manager
 {
     public class PauseManager : MonoBehaviour
     {
+        [SerializeField] private EndGameController _endGameController;
         [SerializeField] private AdditionalViewController _additionalViewController;
         [SerializeField] private Transform _pauseMenu;
         [SerializeField] private Button _pauseButton;
+        [SerializeField] private AudioSource _pauseAudioSource;
 
         private bool _isEnabled;
 
@@ -34,13 +36,18 @@ namespace Manager
                 }
                 else
                 {
-                    SetPause();
+                    if (!_endGameController.gameObject.activeSelf)
+                    {
+                        SetPause();
+                    }
                 }
             }
         }
         
         private void SetPause()
         {
+            _pauseAudioSource.Play();
+                
             _isEnabled = !_isEnabled;
             _pauseMenu.gameObject.SetActive(_isEnabled);
                 

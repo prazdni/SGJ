@@ -16,13 +16,13 @@ namespace Controllers
         {
             _fieldController.DayChanged += OnDayChanged;
             _fieldController.TaskChanged += OnTaskChanged;
-            _dayText.text = $"день: 1";
-            _taskText.text = $"заданий сделать: 1";
+            _dayText.text = "";
+            _taskText.text = "";
         }
 
         private void OnDayChanged(int day)
         {
-            _dayText.text = $"день: {day}";
+            _dayText.text = $"День: {day}";
         }
 
         private void OnTaskChanged(int task)
@@ -39,7 +39,7 @@ namespace Controllers
                 }
                 else
                 {
-                    _taskText.text = $"заданий сделать: {Mathf.Clamp(task, 0, 10)}";
+                    _taskText.text = $"Заданий сделать: {Mathf.Clamp(task, 0, 10)}";
                 }
             }
         }

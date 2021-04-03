@@ -38,12 +38,14 @@ namespace Controllers
                 characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.EndGame)
             {
                 _buttonOne.gameObject.SetActive(false);
+                _buttonTwo.gameObject.SetActive(true);
                 
                 _buttonTwo.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
                 _buttonTwoText.text = characterView.Characteristics.Responses[0].ResponsePhrase;
             }
             else
             {
+                _buttonOne.gameObject.SetActive(true);
                 _buttonTwo.gameObject.SetActive(true);
                 
                 _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});

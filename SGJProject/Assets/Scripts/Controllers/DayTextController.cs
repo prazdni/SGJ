@@ -10,10 +10,12 @@ namespace Controllers
         [SerializeField] private FieldController _fieldController;
         
         private TMP_Text _dayText;
+        private AudioSource _audioSource;
 
         private void Awake()
         {
             _dayText = GetComponent<TMP_Text>();
+            _audioSource = GetComponent<AudioSource>();
             
             _sequence = DOTween.Sequence();
             _sequence
@@ -22,13 +24,14 @@ namespace Controllers
             _sequence.SetAutoKill(false);
             
             _fieldController.DayChanged += OnDayChanged;
-            _dayText.text = $"день: 1";
+            _dayText.text = $"";
             
         }
 
         private void OnDayChanged(int day)
         {
-            _dayText.text = $"день: {day}";
+            _audioSource.Play();
+            _dayText.text = $"День: {day}";
             _sequence.Restart();
         }
     }
