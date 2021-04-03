@@ -10,34 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44f7d2ce55624f21b06e761af2b0478b, type: 3}
-  m_Name: MorningCharacter
+  m_Name: EndGameCharacter
   m_EditorClassIdentifier: 
   Characteristics:
-  - Phrase: "\u0423\u0442\u0440\u043E"
-    Explanation: "\u0412\u043F\u0435\u0440\u0451\u0434 \u0432 \u043D\u043E\u0432\u044B\u0439
-      \u0434\u0435\u043D\u044C!"
+  - Phrase: "\u041F\u0440\u0438\u0432\u0435\u0442 \u0438\u0437 \u0413\u0435\u043B\u0435\u043D\u0436\u0438\u043A\u0430"
+    Explanation: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0441\u043B\u0443\u0436\u0431\u0443!"
     Responses:
-    - ResponsePhrase: "\u041D\u043E\u0432\u044B\u0439 \u0434\u0435\u043D\u044C -
-        \u043D\u043E\u0432\u044B\u0435 \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"
+    - ResponsePhrase: "\u0414\u0430 \u043D\u0435 \u0437\u0430 \u0447\u0442\u043E!"
       Influences:
-      - InfluenceType: 7
+      - InfluenceType: 8
         InfluencePoint: 0
-    Sprite: {fileID: 21300000, guid: a6ae2c8134bff814383697356bbafb86, type: 3}
-  - Phrase: "\u0423\u0442\u0440\u0435\u0447\u043A\u043E"
-    Explanation: "\u041D\u043E\u0432\u044B\u0439 \u0434\u0435\u043D\u044C \u0441\u0443\u043B\u0438\u0442
-      \u043D\u043E\u0432\u044B\u0435 \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"
-    Responses:
-    - ResponsePhrase: "\u041F\u043E\u0435\u0445\u0430\u043B\u0438"
-      Influences:
-      - InfluenceType: 7
-        InfluencePoint: 0
-    Sprite: {fileID: 21300000, guid: a6ae2c8134bff814383697356bbafb86, type: 3}
-  - Phrase: "\u0414\u043E\u0431\u0440\u043E\u0435 \u0443\u0442\u0440\u043E"
-    Explanation: "\u041D\u0435 \u0434\u0435\u043D\u044C, \u0430 \u0441\u043A\u0430\u0437\u043A\u0430!"
-    Responses:
-    - ResponsePhrase: "\u041A\u0430\u043A \u0433\u043E\u0432\u043E\u0440\u0438\u043B
-        \u0413\u0430\u0433\u0430\u0440\u0438\u043D: \u041F\u043E\u0435\u0445\u0430\u043B\u0438!"
-      Influences:
-      - InfluenceType: 7
-        InfluencePoint: 0
-    Sprite: {fileID: 21300000, guid: a6ae2c8134bff814383697356bbafb86, type: 3}
+    Sprite: {fileID: 21300000, guid: a5ca7d50e55e42b459ebc07b0bf285ea, type: 3}

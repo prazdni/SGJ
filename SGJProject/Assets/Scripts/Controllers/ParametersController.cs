@@ -39,7 +39,10 @@ namespace Controllers
 
         public void ChangeResource(Response response)
         {
-            _additionalViewController.gameObject.SetActive(false);
+            if (response.Influences[0].InfluenceType != InfluenceType.Dialogue)
+            {
+                _additionalViewController.gameObject.SetActive(false);
+            }
 
             var influences = response.Influences;
 
@@ -59,6 +62,12 @@ namespace Controllers
                         break;
                     case InfluenceType.NightCharacter:
                         _fieldController.StartDay();
+                        return;
+                    case InfluenceType.Dialogue:
+                        _fieldController.ChangeDialogue();
+                        return;
+                    case InfluenceType.EndDialogue:
+                        _fieldController.EndDialogue();
                         return;
                     case InfluenceType.MorningCharacter:
                         _fieldController.StartTasks();

@@ -12,23 +12,24 @@ namespace Configs
     }
 
     [Serializable]
-    public class Characteristics
+    public struct Characteristics
     {
         public string Phrase;
+        public string Name;
         public string Explanation;
         public List<Response> Responses;
         public Sprite Sprite;
     }
 
     [Serializable]
-    public class Response
+    public struct Response
     {
         public string ResponsePhrase;
         public List<Influence> Influences;
     }
     
     [Serializable]
-    public class Influence
+    public struct Influence
     {
         public InfluenceType InfluenceType;
         public float InfluencePoint;

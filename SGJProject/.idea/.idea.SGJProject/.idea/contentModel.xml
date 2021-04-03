@@ -33,6 +33,7 @@
             <e p="AdditionalViewController.cs" t="Include" />
             <e p="DayController.cs" t="Include" />
             <e p="DayTextController.cs" t="Include" />
+            <e p="DialogueViewController.cs" t="Include" />
             <e p="EndGameController.cs" t="Include" />
             <e p="FieldController.cs" t="Include" />
             <e p="ParametersController.cs" t="Include" />

@@ -1,5 +1,9 @@
-﻿public static class Extensions
+﻿using System;
+using Configs;
+
+public static class Extensions
 { 
+    private static readonly string Dialogue = "Character/Dialogues/Dialogue";
     private static readonly string EndGameCharacter = "Character/Sequences/EndGameCharacter";
     private static readonly string MorningCharacter = "Character/Sequences/MorningCharacter";
     private static readonly string NightCharacter = "Character/Sequences/NightCharacter";
@@ -52,6 +56,37 @@
                 return DayTen;
             default:
                 return "";
+        }
+    }
+
+    public static string Return(InfluenceType influenceType)
+    {
+        switch (influenceType)
+        {
+            case InfluenceType.None:
+                return "";
+            case InfluenceType.Money:
+                return "";
+            case InfluenceType.Science:
+                return "";
+            case InfluenceType.Awards:
+                return "";
+            case InfluenceType.Tools:
+                return "";
+            case InfluenceType.Agent:
+                return "";
+            case InfluenceType.NightCharacter:
+                return "";
+            case InfluenceType.MorningCharacter:
+                return "";
+            case InfluenceType.EndGame:
+                return "";
+            case InfluenceType.Dialogue:
+                return Dialogue;
+            case InfluenceType.EndDialogue:
+                return "";
+            default:
+                throw new ArgumentOutOfRangeException(nameof(influenceType), influenceType, null);
         }
     }
 }

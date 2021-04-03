@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Controllers
 {
-    public class DayController : MonoBehaviour, IInitialize<CharactersDaySequence>
+    public class DayController : MonoBehaviour, IInitialize<CharactersDaySequence>, IInitialize<Characteristics>
     {
         [SerializeField] private CharacterView[] _characterViews;
         
@@ -27,6 +27,12 @@ namespace Controllers
                 characterViews.RemoveAt(num2);
                 characters.RemoveAt(num1);
             }
+        }
+
+        public void Init(Characteristics item)
+        {
+            var characterView = _characterViews[0];
+            characterView.Init(item);
         }
     }
 }

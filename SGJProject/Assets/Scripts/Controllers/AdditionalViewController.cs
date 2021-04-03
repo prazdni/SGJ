@@ -51,5 +51,18 @@ namespace Controllers
                 _buttonTwoText.text = characterView.Characteristics.Responses[1].ResponsePhrase;
             }
         }
+
+        public void ShowAdditional(Characteristics characteristics)
+        {
+            _image.sprite = characteristics.Sprite;
+            _text.text = characteristics.Explanation;
+            
+            _buttonOne.onClick.RemoveAllListeners();
+            _buttonTwo.onClick.RemoveAllListeners();
+            _buttonOne.onClick.AddListener(() => { Action.Invoke(characteristics.Responses[0]);});
+            _buttonOneText.text = characteristics.Responses[0].ResponsePhrase;
+                
+            _buttonTwo.gameObject.SetActive(false);
+        }
     }
 }

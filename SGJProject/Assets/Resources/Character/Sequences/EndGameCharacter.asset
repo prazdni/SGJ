@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EndGameCharacter
   m_EditorClassIdentifier: 
   Characters:
-  - {fileID: 11400000, guid: 67e551bdd3c123640811907070b5dacd, type: 2}
+  - {fileID: 11400000, guid: 2062dfc993176d14ab49cbd2e1f0e5d6, type: 2}

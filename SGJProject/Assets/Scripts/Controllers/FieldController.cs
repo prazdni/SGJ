@@ -12,6 +12,7 @@ namespace Controllers
 
         public int Tasks => _tasks;
 
+        [SerializeField] private DialogueViewController _dialogueViewController;
         [SerializeField] private SamplesController _samplesController;
         [SerializeField] private DayController[] _days;
         [SerializeField] private EndGameController _endGameController;
@@ -23,7 +24,8 @@ namespace Controllers
         {
             _tasks = 1;
             
-            ShowMorningCharacter();
+            ShowStartDialogue();
+            //ShowMorningCharacter();
         }
 
         public void Check()
@@ -145,6 +147,26 @@ namespace Controllers
         {
             _samplesController.Cleanup();
             _endGameController.EndGame(str);
+        }
+
+        private void ShowStartDialogue()
+        {
+            _samplesController.Cleanup();
+            
+            var resource = Resources.Load<Character>(Extensions.Return(InfluenceType.Dialogue));
+            _days[2].Init(resource.Characteristics[0]);
+            _dialogueViewController.SetDialogue(resource);
+        }
+
+        public void ChangeDialogue()
+        {
+            _dialogueViewController.ChangeDialogueScene();
+        }
+
+        public void EndDialogue()
+        {
+            _dialogueViewController.CleanupDialogue();
+            StartDay();
         }
     }
 }

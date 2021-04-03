@@ -25,7 +25,11 @@ namespace Controllers
 
         private void OnResponse(Response response)
         {
-            _characterView.gameObject.SetActive(false);
+            if (response.Influences[0].InfluenceType != InfluenceType.Dialogue && 
+                response.Influences[0].InfluenceType != InfluenceType.EndDialogue)
+            {
+                _characterView.gameObject.SetActive(false);
+            }
         }
 
         public void Cleanup()
