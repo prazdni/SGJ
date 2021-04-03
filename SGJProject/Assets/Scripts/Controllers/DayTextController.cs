@@ -1,5 +1,4 @@
-﻿using System;
-using Interface;
+﻿using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -7,27 +6,30 @@ namespace Controllers
 {
     public class DayTextController : MonoBehaviour
     {
+        private Sequence _sequence;
         [SerializeField] private FieldController _fieldController;
         
-        [SerializeField] private TMP_Text _dayText;
-        [SerializeField] private TMP_Text _taskText;
+        private TMP_Text _dayText;
 
         private void Awake()
         {
+            _dayText = GetComponent<TMP_Text>();
+            
+            _sequence = DOTween.Sequence();
+            _sequence
+                .Append(_dayText.DOFade(1.0f, 1.0f))
+                .Append(_dayText.DOFade(0.0f, 1.0f));
+            _sequence.SetAutoKill(false);
+            
             _fieldController.DayChanged += OnDayChanged;
-            _fieldController.TaskChanged += OnTaskChanged;
             _dayText.text = $"день: 1";
-            _taskText.text = $"заданий сделать: 1";
+            
         }
 
         private void OnDayChanged(int day)
         {
             _dayText.text = $"день: {day}";
-        }
-
-        private void OnTaskChanged(int task)
-        {
-            _taskText.text = $"заданий сделать: {Mathf.Clamp(task, 0, 10)}";
+            _sequence.Restart();
         }
     }
 }

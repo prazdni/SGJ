@@ -29,11 +29,24 @@ namespace Controllers
             
             _buttonOne.onClick.RemoveAllListeners();
             _buttonTwo.onClick.RemoveAllListeners();
-            _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
-            _buttonTwo.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[1]);});
             
-            _buttonOneText.text = characterView.Characteristics.Responses[0].ResponsePhrase;
-            _buttonTwoText.text = characterView.Characteristics.Responses[1].ResponsePhrase;
+            if (characterView.Characteristics.Responses[0].Influences[0].InfluenceType == InfluenceType.MainCharacter)
+            {
+                _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
+                _buttonOneText.text = characterView.Characteristics.Responses[0].ResponsePhrase;
+                
+                _buttonTwo.gameObject.SetActive(false);
+            }
+            else
+            {
+                _buttonTwo.gameObject.SetActive(true);
+                
+                _buttonOne.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[0]);});
+                _buttonOneText.text = characterView.Characteristics.Responses[0].ResponsePhrase;
+                
+                _buttonTwo.onClick.AddListener(() => { Action.Invoke(characterView.Characteristics.Responses[1]);});
+                _buttonTwoText.text = characterView.Characteristics.Responses[1].ResponsePhrase;
+            }
         }
     }
 }

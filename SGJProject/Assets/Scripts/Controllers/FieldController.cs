@@ -21,15 +21,19 @@ namespace Controllers
         [SerializeField] private int _tasks;
 
         private bool _isAgent;
-        private bool _isBoss;
+        private bool _isDayChanged;
+        private bool _isNightCharacter;
+        private bool _isMorningCharacter;
 
         private void Awake()
         {
             _isAgent = false;
-            _isBoss = false;
+            _isNightCharacter = false;
+            _isMorningCharacter = false;
+            _isDayChanged = false;
             _tasks = 1;
             
-            ChangeDay(_day);
+            ShowMorningCharacter();
         }
 
         public void CheckInvisible()
@@ -38,10 +42,10 @@ namespace Controllers
             
             if (quantity == _tasks)
             {
-                _isBoss = true;
+                _isNightCharacter = true;
             }
 
-            if (quantity < _tasks && !_isBoss && !_isAgent)
+            if (quantity < _tasks && !_isNightCharacter && !_isMorningCharacter && !_isAgent)
             {
                 ChangeDay();
             }
@@ -51,11 +55,18 @@ namespace Controllers
                 _isAgent = false;
                 ChangeDay(_day);
             }
-
-            if (_isBoss)
+            
+            if (_isMorningCharacter)
             {
-                _isBoss = false;
-                ShowBoss();
+                _isMorningCharacter = false;
+                ShowMorningCharacter();
+            }
+            
+            if (_isNightCharacter)
+            {
+                _isMorningCharacter = true;
+                _isNightCharacter = false;
+                ShowNightCharacter();
             }
         }
         
@@ -109,19 +120,94 @@ namespace Controllers
             
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-1));
 
-            _days[_days.Length - 1].Init(resource);
+            _days[_days.Length - 3].Init(resource);
             
             TaskChanged.Invoke(0);
         }
 
-        public void ShowBoss()
+        public void ShowRegular()
+        {
+            if (_isAgent)
+            {
+                _isAgent = false;
+                ChangeDay(_day);
+            }
+            else
+            {
+                if (!_isMorningCharacter)
+                {
+                    _isMorningCharacter = true;
+                    ShowMorningCharacter();
+                }
+                else
+                {
+                    if (!_isDayChanged)
+                    {
+                        _isDayChanged = true;
+                        ChangeDay();
+                    }
+                    else
+                    {
+                        int quantity = _samplesController.CheckVisibleTasks();
+            
+                        if (quantity == _tasks)
+                        {
+                            _isNightCharacter = true;
+                            ShowNightCharacter();
+                            _isMorningCharacter = false;
+                            _isDayChanged = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void ShowNightCharacter()
+        {
+            _samplesController.Cleanup();
+            
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-2));
+            _days[_days.Length - 1].Init(resource);
+            
+            TaskChanged.Invoke(0);
+            
+            _isMorningCharacter = false;
+        }
+
+        public void ShowMorningCharacter()
         {
             _samplesController.Cleanup();
 
-            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-2));
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-3));
             _days[_days.Length - 2].Init(resource);
             
             TaskChanged.Invoke(0);
+        }
+
+        public void RestartDay()
+        {
+            ChangeDay(_day);
+        }
+
+        public void StartTasks()
+        {
+            _samplesController.Cleanup();
+
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(_day));
+            
+            _days[_day].Init(resource);
+            
+            TaskChanged.Invoke(_samplesController.CheckVisibleTasks() - _tasks);
+        }
+
+        public void StartDay()
+        {
+            _day++;
+            ChangeTasksQuantity();
+            
+            DayChanged.Invoke(_day);
+            
+            ShowMorningCharacter();
         }
     }
 }

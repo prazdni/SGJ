@@ -57,6 +57,15 @@ namespace Controllers
                 {
                     case InfluenceType.None:
                         break;
+                    case InfluenceType.NightCharacter:
+                        _fieldController.StartDay();
+                        break;
+                    case InfluenceType.MorningCharacter:
+                        _fieldController.StartTasks();
+                        break;
+                    case InfluenceType.Agent:
+                        _fieldController.RestartDay();
+                        break;
                     case InfluenceType.Money:
                         _parameters[0].fillAmount = _parameters[0].fillAmount + influence.InfluencePoint;
                         break;
@@ -97,7 +106,7 @@ namespace Controllers
             }
             else
             {
-                _fieldController.CheckInvisible();
+                _fieldController.ShowRegular();
             }
         }
 
