@@ -48,7 +48,7 @@ namespace Manager
             }
         }
         
-        private void SetPause()
+        public void SetPause()
         {
             _pauseAudioSource.Play();
                 
