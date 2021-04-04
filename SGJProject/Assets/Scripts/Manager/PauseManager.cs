@@ -8,7 +8,6 @@ namespace Manager
 {
     public class PauseManager : MonoBehaviour
     {
-        [SerializeField] private EndGameController _endGameController;
         [SerializeField] private AdditionalViewController _additionalViewController;
         [SerializeField] private Transform _pauseMenu;
         [SerializeField] private Button _pauseButton;
@@ -30,14 +29,18 @@ namespace Manager
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (_additionalViewController.gameObject.activeSelf)
+                if (_pauseMenu.gameObject.activeSelf)
                 {
-                    _additionalViewController.AdditionalViewButton.onClick.Invoke();
-                    //_additionalViewController.gameObject.SetActive(false);
+                    SetPause();
                 }
                 else
                 {
-                    if (!_endGameController.gameObject.activeSelf)
+                    if (_additionalViewController.gameObject.activeSelf)
+                    {
+                        _additionalViewController.AdditionalViewButton.onClick.Invoke();
+                        //_additionalViewController.gameObject.SetActive(false);
+                    }
+                    else
                     {
                         SetPause();
                     }
