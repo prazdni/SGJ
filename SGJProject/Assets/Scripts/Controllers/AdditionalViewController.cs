@@ -10,6 +10,7 @@ namespace Controllers
 {
     public class AdditionalViewController : MonoBehaviour
     {
+        public Button AdditionalViewButton;
         public Action<Response> Action = (r) => { };
         
         [SerializeField] private Image _image;

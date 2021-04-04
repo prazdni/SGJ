@@ -53,4 +53,4 @@ MonoBehaviour:
         InfluencePoint: -0.1
       - InfluenceType: 1
         InfluencePoint: 0.1
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 6adeef7efbdeccb42af18e00128b2f79, type: 3}

@@ -32,7 +32,8 @@ namespace Manager
             {
                 if (_additionalViewController.gameObject.activeSelf)
                 {
-                    _additionalViewController.gameObject.SetActive(false);
+                    _additionalViewController.AdditionalViewButton.onClick.Invoke();
+                    //_additionalViewController.gameObject.SetActive(false);
                 }
                 else
                 {
@@ -71,6 +72,11 @@ namespace Manager
             }
             
             SceneManager.LoadScene(sceneNumber);
+        }
+
+        public void SetMusic()
+        {
+            AudioManager.Instance.AdjustMusicVolume();
         }
     }
 }

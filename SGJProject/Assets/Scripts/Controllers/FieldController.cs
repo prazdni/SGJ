@@ -8,9 +8,6 @@ namespace Controllers
     {
         public Action<int> DayChanged = i => { };
         public Action<int> TaskChanged = t => { };
-        public int Day => _day;
-
-        public int Tasks => _tasks;
 
         [SerializeField] private DialogueViewController _dialogueViewController;
         [SerializeField] private SamplesController _samplesController;
@@ -25,7 +22,17 @@ namespace Controllers
             _tasks = 1;
             
             ShowStartDialogue();
-            //ShowMorningCharacter();
+
+            _endGameController.OnRestart += OnRestart;
+        }
+
+        private void OnRestart()
+        {
+            _dialogueViewController.CleanupDialogue();
+
+            _day = 1;
+            
+            RestartDay();
         }
 
         public void Check()
@@ -113,7 +120,7 @@ namespace Controllers
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-3));
             
-            if (_day == 2)
+            if (_day == 11)
             {
                 ShowGoodEnding();
             }
@@ -151,10 +158,10 @@ namespace Controllers
             ShowMorningCharacter();
         }
 
-        public void EndGame(string str)
+        public void EndGame(string str, bool isWin)
         {
             _samplesController.Cleanup();
-            _endGameController.EndGame(str);
+            _endGameController.EndGame(str, isWin);
         }
 
         private void ShowStartDialogue()

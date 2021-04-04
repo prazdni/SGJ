@@ -41,7 +41,8 @@ namespace Controllers
         {
             if (response.Influences[0].InfluenceType != InfluenceType.Dialogue)
             {
-                _additionalViewController.gameObject.SetActive(false);
+                _additionalViewController.AdditionalViewButton.onClick.Invoke();
+                //_additionalViewController.gameObject.SetActive(false);
             }
 
             var influences = response.Influences;
@@ -82,12 +83,12 @@ namespace Controllers
                     case InfluenceType.EndGame:
                         if (influence.InfluencePoint >= 1)
                         {
-                            _fieldController.EndGame("Спасибо за то, что поиграли в игру!");
+                            _fieldController.EndGame("Спасибо за то, что поиграли в игру!", true);
                         }
 
                         if (influence.InfluencePoint < 1)
                         {
-                            _fieldController.EndGame("Почти получилось!");
+                            _fieldController.EndGame("Почти получилось!", false);
                         }
                         return;
                     case InfluenceType.Money:
