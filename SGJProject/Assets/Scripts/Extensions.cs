@@ -2,7 +2,16 @@
 using Configs;
 
 public static class Extensions
-{ 
+{
+    private static readonly string EndGameDialogue = "Character/Dialogues/EndGameDialogue";
+    private static readonly string ToolsTop = "Character/Sequences/Ending/ToolsTop";
+    private static readonly string ToolsBottom = "Character/Sequences/Ending/ToolsBottom";
+    private static readonly string AwardsTop = "Character/Sequences/Ending/AwardsTop";
+    private static readonly string AwardsBottom = "Character/Sequences/Ending/AwardsBottom";
+    private static readonly string SafetyTop = "Character/Sequences/Ending/SafetyTop";
+    private static readonly string SafetyBottom = "Character/Sequences/Ending/SafetyBottom";
+    private static readonly string MoneyTop = "Character/Sequences/Ending/MoneyTop";
+    private static readonly string MoneyBottom = "Character/Sequences/Ending/MoneyBottom";
     private static readonly string Dialogue = "Character/Dialogues/Dialogue";
     private static readonly string EndGameCharacter = "Character/Sequences/EndGameCharacter";
     private static readonly string MorningCharacter = "Character/Sequences/MorningCharacter";
@@ -24,6 +33,8 @@ public static class Extensions
     {
         switch (day)
         {
+            case -5:
+                return EndGameDialogue;
             case -4:
                 return EndGameCharacter;
             case -3:
@@ -85,6 +96,51 @@ public static class Extensions
                 return Dialogue;
             case InfluenceType.EndDialogue:
                 return "";
+            default:
+                throw new ArgumentOutOfRangeException(nameof(influenceType), influenceType, null);
+        }
+    }
+
+    public static string Return(InfluenceType influenceType, bool isBottom)
+    {
+        switch (influenceType)
+        {
+            case InfluenceType.Money:
+                if (isBottom)
+                {
+                    return MoneyBottom;
+                }
+                else
+                {
+                    return MoneyTop;
+                }
+            case InfluenceType.Safety:
+                if (isBottom)
+                {
+                    return SafetyBottom;
+                }
+                else
+                {
+                    return SafetyTop;
+                }
+            case InfluenceType.Awards:
+                if (isBottom)
+                {
+                    return AwardsBottom;
+                }
+                else
+                {
+                    return AwardsTop;
+                }
+            case InfluenceType.Tools:
+                if (isBottom)
+                {
+                    return ToolsBottom;
+                }
+                else
+                {
+                    return ToolsTop;
+                }
             default:
                 throw new ArgumentOutOfRangeException(nameof(influenceType), influenceType, null);
         }

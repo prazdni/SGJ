@@ -80,7 +80,15 @@ namespace Controllers
                         _fieldController.RestartDay();
                         return;
                     case InfluenceType.EndGame:
-                        _fieldController.EndGame("Спасибо за то, что поиграли в игру!");
+                        if (influence.InfluencePoint >= 1)
+                        {
+                            _fieldController.EndGame("Спасибо за то, что поиграли в игру!");
+                        }
+
+                        if (influence.InfluencePoint < 1)
+                        {
+                            _fieldController.EndGame("Почти получилось!");
+                        }
                         return;
                     case InfluenceType.Money:
                         _parameters[0].fillAmount = _parameters[0].fillAmount + influence.InfluencePoint;
@@ -111,7 +119,8 @@ namespace Controllers
                 }
                 else
                 {
-                    _fieldController.EndGame("Попробуй ещё раз!");
+                    _fieldController.ShowBadEnding(tuple.influenceType, tuple.isBottom);
+                    //_fieldController.EndGame("Попробуй ещё раз!");
                 }
             }
             else
@@ -120,9 +129,10 @@ namespace Controllers
             }
         }
 
-        private (int index, bool isBottom) CheckDeath()
+        private (int index, InfluenceType influenceType, bool isBottom) CheckDeath()
         {
             var index = -1;
+            var influenceType = InfluenceType.None;
             var isBottom = false;
             
             for (int i = 0; i < _parameters.Length; i++)
@@ -130,6 +140,16 @@ namespace Controllers
                 if (_parameters[i].fillAmount == 0.0f)
                 {
                     index = i;
+                    
+                    influenceType = i switch
+                    {
+                        0 => InfluenceType.Money,
+                        1 => InfluenceType.Safety,
+                        2 => InfluenceType.Awards,
+                        3 => InfluenceType.Tools,
+                        _ => influenceType
+                    };
+
                     isBottom = true;
                     break;
                 }
@@ -137,11 +157,19 @@ namespace Controllers
                 if (_parameters[i].fillAmount == 1.0f)
                 {
                     index = i;
+                    influenceType = i switch
+                    {
+                        0 => InfluenceType.Money,
+                        1 => InfluenceType.Safety,
+                        2 => InfluenceType.Awards,
+                        3 => InfluenceType.Tools,
+                        _ => influenceType
+                    };
                     isBottom = false;
                 }
             }
 
-            return (index, isBottom);
+            return (index, influenceType, isBottom);
         }
 
         private void ShowAgent(Response response)

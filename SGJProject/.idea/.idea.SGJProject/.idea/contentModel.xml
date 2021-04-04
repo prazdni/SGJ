@@ -38,7 +38,6 @@
             <e p="FieldController.cs" t="Include" />
             <e p="ParametersController.cs" t="Include" />
             <e p="SamplesController.cs" t="Include" />
-            <e p="SoundController.cs" t="Include" />
             <e p="TextController.cs" t="Include" />
           </e>
           <e p="Extensions.cs" t="Include" />

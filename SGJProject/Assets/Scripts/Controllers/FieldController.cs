@@ -113,9 +113,9 @@ namespace Controllers
 
             var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(-3));
             
-            if (_day == 11)
+            if (_day == 2)
             {
-                ShowEndGameCharacter();
+                ShowGoodEnding();
             }
             else
             {
@@ -175,6 +175,24 @@ namespace Controllers
         {
             _dialogueViewController.CleanupDialogue();
             StartDay();
+        }
+
+        public void ShowBadEnding(InfluenceType type, bool isBottom)
+        {
+            _samplesController.Cleanup();
+            
+            var resource = Resources.Load<CharactersDaySequence>(Extensions.Return(type, isBottom));
+            _days[1].Init(resource);
+            TaskChanged.Invoke(0);
+        }
+
+        public void ShowGoodEnding()
+        {
+            _samplesController.Cleanup();
+            var resource = Resources.Load<Character>(Extensions.Return(-5));
+            Debug.Log(resource.Characteristics[0].Phrase);
+            _days[2].Init(resource.Characteristics[0]);
+            _dialogueViewController.SetDialogue(resource);
         }
     }
 }

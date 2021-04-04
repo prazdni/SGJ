@@ -22,6 +22,8 @@ namespace Controllers
 
         public void SetDialogue(Character characterDialogue)
         {
+            _characteristicsCount = 0;
+            _dialogueCharacterView.gameObject.SetActive(true);
             _characteristics = characterDialogue.Characteristics;
             _additionalViewController.ShowAdditional(_characteristics[_characteristicsCount]);
         }
